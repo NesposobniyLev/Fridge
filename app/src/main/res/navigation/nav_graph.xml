@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.fridge.FirstFragment"
+        android:label="firstfragment"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_FifthFragment"
+            app:destination="@id/FifthFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SixthFragment"
+            app:destination="@id/SixthFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SeventhFragment"
+            app:destination="@id/SeventhFragment" />
+        <action
+            android:id="@+id/action_tolab4"
+            app:destination="@id/lab4" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.fridge.SecondFragment"
+        android:label="secondfragment"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.fridge.ThirdFragment"
+        android:label="thirdfragment"
+        tools:layout="@layout/fragment_three">
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_FourthFragment"
+            app:destination="@id/FourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FourthFragment"
+        android:name="com.example.fridge.FourthFragment"
+        android:label="fourthfragment"
+        tools:layout="@layout/fragment_four">
+    </fragment>
+    <fragment
+        android:id="@+id/FifthFragment"
+        android:name="com.example.fridge.FifthFragment"
+        android:label="fifthfragment"
+        tools:layout="@layout/fragment_five">
+
+        <action
+            android:id="@+id/action_FifthFragment_to_FourthFragment"
+            app:destination="@id/FourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SixthFragment"
+        android:name="com.example.fridge.SixthFragment"
+        android:label="sixthfragment"
+        tools:layout="@layout/fragment_six">
+    </fragment>
+    <fragment
+        android:id="@+id/SeventhFragment"
+        android:name="com.example.fridge.SeventhFragment"
+        android:label="seventhfragment"
+        tools:layout="@layout/fragment_seven">
+    </fragment>
+    <fragment
+        android:id="@+id/lab4"
+        android:name="com.example.fridge.Lab4"
+        android:label="lab4"
+        tools:layout="@layout/lab4">
+    </fragment>
+</navigation>
