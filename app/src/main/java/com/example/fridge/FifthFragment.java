@@ -72,7 +72,7 @@ public class FifthFragment extends Fragment {
         b.setBackgroundColor(getResources().getColor(R.color.white));
         if (count == accepted){
             allList.add(b);
-        } else if (count - accepted <= 3) {
+        } else if (count - accepted <= 4) {
             finalList.add(b);
         }
         b.setOnClickListener(v -> {

@@ -101,6 +101,20 @@ public class ThirdFragment extends Fragment {
                         if (obj.getText().length() >= search.getText().length()) {
                             if (Objects.equals(obj.getText().subSequence(0, search.getText().length()).toString().toLowerCase(), search.getText().toString().toLowerCase())) {
                                 recipeList.add(obj);
+                            } else {
+                                for (int i = 0; i < obj.getText().length(); i++) {
+                                    char ch = obj.getText().charAt(i);
+                                    if (ch == ' ' || ch == '(') {
+                                        if (search.getText().length() + i + 1 <= obj.getText().length()) {
+                                            if (Objects.equals(obj.getText().subSequence(i + 1, search.getText().length() + i + 1).toString().toLowerCase(), search.getText().toString().toLowerCase())) {
+                                                recipeList.add(obj);
+                                                break;
+                                            }
+                                        } else {
+                                            break;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

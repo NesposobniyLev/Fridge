@@ -1,0 +1,58 @@
+"template":
+{
+"image": ".jpg",
+"ingredients": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+"text": ["Время приготовления: .\n\n",
+"Энергетическая ценность:\n",
+"Калорийность:  ккал\n",
+"Белки:  г\n",
+"Жиры:  г\n",
+"Углеводы:  г\n\n",
+"Ингредиенты:\n",
+"- : \n",
+"- : \n",
+"- : \n",
+"- : \n",
+"- : \n",
+"- : \n\n",
+"Инструкция приготовления:\n",
+"\n",
+"\n",
+"\n",
+"\n",
+"\n",
+"\n"
+]
+},
+
+
+
+
+//для получения данных с помощью апи
+new Thread(new Runnable() {
+            URL url;
+            int number = (int) (Math.random() * ((999999999 - -999999999) + 1)) + -999999999;
+            HttpURLConnection connection = null;
+            public void run() {
+                try{
+                    try{
+                        url = new URL("http://numbersapi.com/"+ number);
+                        connection = (HttpURLConnection) url.openConnection();
+                        BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                        String line = br.readLine();
+                        TextView t = view.findViewById(R.id.textView);
+                        new Handler(Looper.getMainLooper()).post(() -> {
+                            t.setText(line);
+                        });
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } finally {
+                    if (connection != null) {
+                        connection.disconnect();
+                    }
+                }
+            }
+        }).start();

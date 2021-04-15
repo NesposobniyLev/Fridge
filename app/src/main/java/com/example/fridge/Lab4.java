@@ -74,7 +74,7 @@ public class Lab4 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
-        mapView.getMap().getMapObjects().addPlacemark(new Point(55.751574, 37.573856),
+        mapView.getMap().getMapObjects().addPlacemark(new Point(55.791574, 37.593856),
                 ImageProvider.fromAsset(this.getContext(), "beze.jpg"));
         mapView.getMap().getMapObjects().addPlacemark(new Point(55.771974, 37.573556),
                 ImageProvider.fromAsset(this.getContext(), "brownie.jpeg"));

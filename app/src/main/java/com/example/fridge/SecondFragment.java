@@ -56,7 +56,7 @@ public class SecondFragment extends Fragment {
         b.setText(name);
         productList.add(b);
         b.setBackgroundColor(getResources().getColor(R.color.red));
-        if (pref.getBoolean(name, false) == true) {
+        if (pref.getBoolean(name, false)) {
             b.setBackgroundColor(getResources().getColor(R.color.green));
         }
         b.setOnClickListener(v -> {
@@ -116,6 +116,20 @@ public class SecondFragment extends Fragment {
                         if (obj.getText().length() >= search.getText().length()) {
                             if (Objects.equals(obj.getText().subSequence(0, search.getText().length()).toString().toLowerCase(), search.getText().toString().toLowerCase())) {
                                 productList.add(obj);
+                            } else {
+                                for (int i = 0; i < obj.getText().length(); i++){
+                                    char ch = obj.getText().charAt(i);
+                                    if (ch == ' ' || ch == '('){
+                                        if (search.getText().length()+i+1 <= obj.getText().length()) {
+                                            if (Objects.equals(obj.getText().subSequence(i + 1, search.getText().length() + i + 1).toString().toLowerCase(), search.getText().toString().toLowerCase())) {
+                                                productList.add(obj);
+                                                break;
+                                            }
+                                        } else {
+                                            break;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
