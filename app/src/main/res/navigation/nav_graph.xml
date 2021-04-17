@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.fridge.FirstFragment"
+        android:name="com.example.fridge.MainMenu"
         android:label="firstfragment"
         tools:layout="@layout/fragment_first">
 
@@ -26,13 +26,10 @@
         <action
             android:id="@+id/action_FirstFragment_to_SeventhFragment"
             app:destination="@id/SeventhFragment" />
-        <action
-            android:id="@+id/action_tolab4"
-            app:destination="@id/lab4" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.fridge.SecondFragment"
+        android:name="com.example.fridge.ProductsMenu"
         android:label="secondfragment"
         tools:layout="@layout/fragment_second">
 
@@ -42,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/ThirdFragment"
-        android:name="com.example.fridge.ThirdFragment"
+        android:name="com.example.fridge.RecipesMenu"
         android:label="thirdfragment"
         tools:layout="@layout/fragment_three">
 
@@ -52,13 +49,13 @@
     </fragment>
     <fragment
         android:id="@+id/FourthFragment"
-        android:name="com.example.fridge.FourthFragment"
+        android:name="com.example.fridge.Recipe"
         android:label="fourthfragment"
         tools:layout="@layout/fragment_four">
     </fragment>
     <fragment
         android:id="@+id/FifthFragment"
-        android:name="com.example.fridge.FifthFragment"
+        android:name="com.example.fridge.RecipesMenuSorted"
         android:label="fifthfragment"
         tools:layout="@layout/fragment_five">
 
@@ -68,20 +65,14 @@
     </fragment>
     <fragment
         android:id="@+id/SixthFragment"
-        android:name="com.example.fridge.SixthFragment"
+        android:name="com.example.fridge.Help"
         android:label="sixthfragment"
         tools:layout="@layout/fragment_six">
     </fragment>
     <fragment
         android:id="@+id/SeventhFragment"
-        android:name="com.example.fridge.SeventhFragment"
+        android:name="com.example.fridge.Notes"
         android:label="seventhfragment"
         tools:layout="@layout/fragment_seven">
-    </fragment>
-    <fragment
-        android:id="@+id/lab4"
-        android:name="com.example.fridge.Lab4"
-        android:label="lab4"
-        tools:layout="@layout/lab4">
     </fragment>
 </navigation>
